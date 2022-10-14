@@ -1,0 +1,44 @@
+/* intro */
+#intro {
+    width: 100%;
+    background-color: rgb(16, 16, 16);
+}
+
+.intro-img {
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh 5vw;
+    overflow: hidden;
+    background-image: url("../images/top-background.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+    z-index: 0;
+}
+
+#intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-box {
+    width: fit-content;
+    margin-bottom: 90vh;
+    background-color: rgba(0, 0, 205, 0.75);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2em;
+    padding: 2em 3em;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+#first-box {
+    margin-top: 45vh;
+}
+
+#last-box {
+    margin-bottom: 50vh;
+}
