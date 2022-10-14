@@ -5,10 +5,11 @@
 }
 
 .intro-img {
-    position: fixed;
+    position: sticky;
+    top: 5vh;
     width: 90vw;
     height: 90vh;
-    margin: 5vh 5vw;
+    margin: 0 5vw 5vh 5vw;
     overflow: hidden;
     background-image: url("../images/top-background.png");
     background-size: cover;
@@ -36,9 +37,39 @@
 }
 
 #first-box {
-    margin-top: 45vh;
+    margin-top: 15vh;
 }
 
 #last-box {
     margin-bottom: 50vh;
+}
+
+/* about coding */
+.about-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-coding {
+    max-width: 60vw;
+}
+
+#study-topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contact {
+    display: none;
+}
+
+
+/* Font styling */
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
 }
