@@ -48,6 +48,7 @@
 .about-container {
     display: flex;
     justify-content: space-around;
+    margin: 2em 0;
 }
 
 .about-coding {
@@ -72,4 +73,12 @@ h2 {
 
 h3 {
     font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+p {
+    font-size: 1.5em;
 }
