@@ -55,10 +55,44 @@
     max-width: 60vw;
 }
 
-#study-topics {
+.about-text {
+    margin-bottom: 1em;
+}
+
+#about-learning {
+    padding: 2em;
+    margin: 1em;
+    background-color: rgb(211, 211, 211);
+    color: rgba(0, 0, 205, 0.9);
+    border-radius: 1em;
+}
+.study-topics {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.study-topics h4 {
+    padding: 0.5em;
+}
+
+.stick-man-container {
+    padding: 3em;
+}
+
+.explain-box {
+    width: fit-content;
+    height: fit-content;
+    min-width: 6em;
+    min-height: 6em;
+    border: 0.75em solid rgb(16, 16, 16);
+    margin-right: 2em;
+    border-radius: 1em;
+}
+
+.stick-man {
+    width: fit-content;
+    font-weight: 900;
 }
 
 #contact {
@@ -69,6 +103,7 @@
 /* Font styling */
 h2 {
     font-size: 3em;
+    line-height: 3;
 }
 
 h3 {
