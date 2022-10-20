@@ -1,3 +1,26 @@
+/* Font styling */
+h2 {
+    font-size: 3em;
+    line-height: 3;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+h5 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.5em;
+}
+
 /* intro */
 #intro {
     width: 100%;
@@ -104,21 +127,43 @@
     display: none;
 }
 
-
-/* Font styling */
-h2 {
-    font-size: 3em;
-    line-height: 3;
+/* Projects grid */
+#project-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 2em;
 }
 
-h3 {
-    font-size: 2em;
+#project-container p {
+    font-size: 1.2em;
 }
 
-h4 {
-    font-size: 1.75em;
+.mixed-messages {
+    grid-row: 1;
+    grid-column: 1;
 }
 
-p {
-    font-size: 1.5em;
+.premier-air {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.portfolio {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.parcel-project {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.cheatsheet {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.sequence-game {
+    grid-row: 3;
+    grid-column: 2;
 }
