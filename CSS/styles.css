@@ -61,7 +61,7 @@
 
 #about-learning {
     padding: 2em;
-    margin: 1em;
+    margin: 2em;
     background-color: rgb(211, 211, 211);
     color: rgba(0, 0, 205, 0.9);
     border-radius: 1em;
@@ -74,6 +74,7 @@
 
 .study-topics h4 {
     padding: 0.5em;
+    cursor: pointer;
 }
 
 .stick-man-container {
@@ -83,15 +84,19 @@
 .explain-box {
     width: fit-content;
     height: fit-content;
-    min-width: 6em;
+    min-width: 8em;
+    max-width: 12em;
     min-height: 6em;
     border: 0.75em solid rgb(16, 16, 16);
     margin-right: 2em;
+    padding: 1em;
     border-radius: 1em;
 }
 
 .stick-man {
-    width: fit-content;
+    width: 5em;
+    font-family: monospace;
+    font-size: 2em;
     font-weight: 900;
 }
 
