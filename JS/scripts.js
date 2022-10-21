@@ -59,3 +59,26 @@ topics[4].onmousedown = function() {
     explainBox.innerHTML = '<p>Responsive web design is configuring a website to respond to changes in screen size. Devs use these design processes to make their websites look nice on all sizes and shapes of screens. A properly resposive website can look entirely different on a mobile device than on a laptop or monitor.</p>'
     displayOpt();
 }
+
+// Contact button
+let contactContainer = document.getElementsByClassName('contact-container')[0];
+let showContact = document.getElementById('contact');
+let contactButton = document.getElementById('show-contact');
+let contactBox = document.getElementsByTagName('h3')[0];
+let contactClicked = false;
+contactBox.onclick = function() {
+    if (contactClicked === false) {
+        showContact.style.display = 'block';
+        contactButton.innerHTML = '-';
+        contactContainer.style.backgroundColor = 'rgb(25, 25, 112)';
+        contactContainer.style.color = 'rgb(211, 211, 211)';
+        contactClicked = true; 
+    } else {
+        showContact.style.display = 'none';
+        contactButton.innerHTML = '+';
+        contactContainer.style.backgroundColor = 'inherit';
+        contactContainer.style.color = 'inherit';
+        contactClicked = false;
+    }
+    
+}

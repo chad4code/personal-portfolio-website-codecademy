@@ -1,30 +1,53 @@
 /* Font styling */
+html {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+}
+
 h2 {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
     font-size: 3em;
     line-height: 3;
 }
 
 h3 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
     font-size: 2em;
 }
 
 h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 500;
     font-size: 1.75em;
 }
 
 h5 {
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+h6 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 p {
     font-size: 1.5em;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* intro */
 #intro {
     width: 100%;
     background-color: rgb(16, 16, 16);
+    scrollbar-width: none;
 }
 
 .intro-img {
@@ -42,6 +65,8 @@ p {
 }
 
 #intro-text {
+    font-family: 'Courier Prime';
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,8 +95,8 @@ p {
 /* about coding */
 .about-container {
     display: flex;
-    justify-content: space-around;
-    margin: 2em 0;
+    justify-content: space-between;
+    margin: 2em 4em;
 }
 
 .about-coding {
@@ -93,11 +118,15 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    cursor: pointer;
+}
+
+.study-topics div {
+    margin-bottom: 1em;
 }
 
 .study-topics h4 {
     padding: 0.5em;
-    cursor: pointer;
 }
 
 .stick-man-container {
@@ -105,6 +134,7 @@ p {
 }
 
 .explain-box {
+    font-family: 'Courier Prime', monospace;
     width: fit-content;
     height: fit-content;
     min-width: 8em;
@@ -123,19 +153,68 @@ p {
     font-weight: 900;
 }
 
+#contact-info {
+    width: 25vw;
+    padding: 0.5rem;
+}
+
+.contact-container {
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.contact-container h3 {
+    cursor: pointer;
+}
+
+.contact-container a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#show-contact {
+    width: 30%;
+}
+
 #contact {
     display: none;
 }
 
-/* Projects grid */
+/* Projects */
+#projects h2 {
+    margin-left: 4rem;
+}
+
 #project-container {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 2em;
+    margin: 1rem 2rem;
 }
 
 #project-container p {
     font-size: 1.2em;
+}
+
+.grid-item {
+    padding: 1em;
+    background-color: rgb(211, 211, 211);
+    border: 0.5em solid rgb(64, 64, 64);
+    border-radius: 30px;
+}
+
+.grid-item .img-cont {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    background-color: rgb(128, 128, 128);
+    border-radius: 20px;
+}
+
+.grid-item img {
+    max-height: 100%;
+    width: fit-content;
 }
 
 .mixed-messages {
@@ -153,7 +232,7 @@ p {
     grid-column: 1;
 }
 
-.parcel-project {
+.wordle {
     grid-row: 2;
     grid-column: 2;
 }
