@@ -113,12 +113,12 @@ img {
     background-color: rgb(211, 211, 211);
     color: rgba(0, 0, 205, 0.9);
     border-radius: 1em;
+    cursor: pointer;
 }
 .study-topics {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    cursor: pointer;
 }
 
 .study-topics div {
@@ -179,7 +179,12 @@ img {
     display: none;
 }
 
-/* Projects */
+
+/* 
+Projects 
+*/
+
+
 #projects h2 {
     margin-left: 4rem;
 }
@@ -215,6 +220,33 @@ img {
 .grid-item img {
     max-height: 100%;
     width: fit-content;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: rgba(0, 0, 205, 0.9);
+}
+
+.grid-item a:hover {
+    text-decoration: underline;
+}
+
+.grid-item h5 {
+    margin-bottom: 0.8em;
+}
+
+.grid-item .status, .grid-item .category {
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.grid-item .category {
+    margin-bottom: 0.5em;
+}
+
+.grid-item .description {
+    margin-bottom: 0.3em;
 }
 
 .mixed-messages {

@@ -5,21 +5,37 @@ let stickManContainer = document.getElementById('stick-man-container');
 stickManContainer.style.display = 'none';
 let topics = document.getElementsByTagName('h4');
 let explainBox = document.getElementsByClassName('explain-box')[0];
+let textBox = document.getElementsByClassName('explain-box');
+let hBox = document.getElementsByTagName('h4');
+let contactInfoSection = document.getElementById('contact-info');
+let contactContainer = document.getElementsByClassName('contact-container')[0];
+let showContact = document.getElementById('contact');
+let contactButton = document.getElementById('show-contact');
+let contactBox = document.getElementsByTagName('h3')[0];
+let contactClicked = false;
 
 // stick man functionality
 function changeColorTheme() {
     aboutLearning.style.backgroundColor = 'rgb(25, 25, 112)';
     aboutLearning.style.color = 'rgb(211, 211, 211)';
-    let textBox = document.getElementsByClassName('explain-box');
     textBox[0].style.border = '0.75em solid rgb(211, 211, 211)';
     textBox[0].style.backgroundColor = 'rgb(250, 250, 250)';
-    let hBox = document.getElementsByTagName('h4');
     for (const element of hBox) {
         element.style.backgroundColor = 'rgb(64, 64, 64)';
         element.style.borderRadius = '0.5em';
         element.style.textDecoration = 'underline';
     }
     explainBox.style.color = 'rgb(64, 64, 64)';
+}
+
+const revertColorTheme = () => {
+    aboutLearning.style.backgroundColor = 'rgb(211, 211, 211)';
+    aboutLearning.style.color = 'rgba(0, 0, 205, 0.9)';
+    for (const element of hBox) {
+        element.style.backgroundColor = 'inherit';
+        element.style.textDecoration = 'none';
+    }
+    explainBox.innerHTML = '<p>Press a suject to see a description.</p>';
 }
 
 document.getElementById('about-learning').addEventListener('mousedown', function () {
@@ -29,8 +45,18 @@ document.getElementById('about-learning').addEventListener('mousedown', function
             stickManContainer.style.padding = '3em';
             changeColorTheme();
             manBoxClicked = true;
+            console.log(manBoxClicked);
         }
     });
+
+contactInfoSection.onmousedown = function () {
+    if (manBoxClicked === true) {
+        stickManContainer.style.display = 'none';
+        revertColorTheme();
+        console.log(manBoxClicked);
+        manBoxClicked = false;
+    }
+}
 
 // explain box functionality
 const displayOpt = () => {
@@ -61,11 +87,6 @@ topics[4].onmousedown = function() {
 }
 
 // Contact button
-let contactContainer = document.getElementsByClassName('contact-container')[0];
-let showContact = document.getElementById('contact');
-let contactButton = document.getElementById('show-contact');
-let contactBox = document.getElementsByTagName('h3')[0];
-let contactClicked = false;
 contactBox.onclick = function() {
     if (contactClicked === false) {
         showContact.style.display = 'block';
