@@ -2,13 +2,14 @@
 html {
     font-family: 'Source Serif 4', serif;
     font-size: 16px;
+    max-width: 100vw !important;
 }
 
 h2 {
     font-family: 'Courier Prime', monospace;
     font-weight: 700;
     font-size: 3em;
-    line-height: 3;
+    margin: 1em 0;
 }
 
 h3 {
@@ -75,6 +76,7 @@ img {
 
 .intro-box {
     width: fit-content;
+    max-width: 60vw;
     margin-bottom: 90vh;
     background-color: rgba(0, 0, 205, 0.75);
     color: rgba(255, 255, 255, 0.9);
@@ -108,8 +110,8 @@ img {
 }
 
 #about-learning {
-    padding: 2em;
-    margin: 2em;
+    padding: 2em 0;
+    margin: 2em 0;
     background-color: rgb(211, 211, 211);
     color: rgba(0, 0, 205, 0.9);
     border-radius: 1em;
@@ -123,6 +125,7 @@ img {
 
 .study-topics div {
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .study-topics h4 {
@@ -155,11 +158,13 @@ img {
 
 #contact-info {
     width: 25vw;
+    height: fit-content;
     padding: 0.5rem;
 }
 
 .contact-container {
     padding: 1em;
+    margin-top: 1em;
     border-radius: 20px;
 }
 
@@ -220,6 +225,7 @@ Projects
 .grid-item img {
     max-height: 100%;
     width: fit-content;
+    overflow: hidden;
 }
 
 .grid-item a {

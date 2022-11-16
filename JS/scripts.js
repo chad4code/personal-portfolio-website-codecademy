@@ -1,6 +1,7 @@
 // Global variables
 let aboutLearning = document.getElementById('about-learning');
 let manBoxClicked = false;
+let hBoxClicked = false;
 let stickManContainer = document.getElementById('stick-man-container');
 stickManContainer.style.display = 'none';
 let topics = document.getElementsByTagName('h4');
@@ -38,30 +39,31 @@ const revertColorTheme = () => {
     explainBox.innerHTML = '<p>Press a suject to see a description.</p>';
 }
 
-document.getElementById('about-learning').addEventListener('mousedown', function () {
-        if (manBoxClicked === false) {
-            stickManContainer.style.display = 'flex';
-            stickManContainer.style.justifyContent = 'center';
-            stickManContainer.style.padding = '3em';
-            changeColorTheme();
-            manBoxClicked = true;
-            console.log(manBoxClicked);
-        }
-    });
-
-contactInfoSection.onmousedown = function () {
-    if (manBoxClicked === true) {
+for (item of hBox) {
+    item.onmousedown = () => {
+        hBoxClicked = true;
+        console.log('hBox.onmousedown');
+    }
+}
+aboutLearning.onmousedown = () => {
+    if (manBoxClicked === false) {
+        stickManContainer.style.display = 'flex';
+        stickManContainer.style.justifyContent = 'center';
+        stickManContainer.style.padding = '3em';
+        changeColorTheme();
+    } else if (manBoxClicked === true && hBoxClicked === false) {
         stickManContainer.style.display = 'none';
         revertColorTheme();
-        console.log(manBoxClicked);
-        manBoxClicked = false;
+        console.log('aboutLearning.onmousedown else if');
     }
+    manBoxClicked = !manBoxClicked;
 }
 
 // explain box functionality
 const displayOpt = () => {
     if (explainBox.style.height > '15em') {
         explainBox.style.maxWidth = '20em';
+        console.log('Display optimization');
     }
 }
 
