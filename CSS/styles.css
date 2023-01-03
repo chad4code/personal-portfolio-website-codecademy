@@ -73,6 +73,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .intro-box {
@@ -84,7 +85,7 @@ img {
     font-size: 2em;
     padding: 2em 3em;
     border-radius: 30px;
-    z-index: 2;
+    z-index: 5;
 }
 
 #first-box {
