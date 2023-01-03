@@ -29,6 +29,12 @@
     }
 }
 
+@media only screen and (max-width: 900px) and (min-width: 650px) {
+    html {
+        max-width: 100vw !important;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     #intro-text {
         font-size: 0.7rem;
