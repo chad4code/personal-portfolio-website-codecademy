@@ -47,6 +47,8 @@ img {
 
 /* intro */
 #intro {
+    position: relative;
+    z-index: -5;
     width: 100%;
     background-color: rgb(16, 16, 16);
     scrollbar-width: none;
@@ -63,20 +65,23 @@ img {
     background-size: cover;
     background-position: center;
     border-radius: 45px;
-    z-index: 0;
+    z-index: -2;
 }
 
 #intro-text {
+    position: relative;
+    z-index: 2;
     font-family: 'Courier Prime';
     font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2;
 }
 
 .intro-box {
+    position: relative;
+    z-index: 5;
     width: fit-content;
     max-width: 60vw;
     margin-bottom: 90vh;
@@ -85,7 +90,6 @@ img {
     font-size: 2em;
     padding: 2em 3em;
     border-radius: 30px;
-    z-index: 5;
 }
 
 #first-box {
